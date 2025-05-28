@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+
 export default defineConfig({
   plugins: [
     tailwindcss(),
@@ -8,9 +9,10 @@ export default defineConfig({
     proxy : {
       '/api' : {
         changeOrigin : true , 
-        target : 'https://wheelie-backend.onrender.com/' , 
+        target : 'https://wheelie-backend.onrender.com' , 
         secure : false
       }
     }
   }
 })
+
