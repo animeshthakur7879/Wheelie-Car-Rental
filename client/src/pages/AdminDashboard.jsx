@@ -4,7 +4,7 @@ import AdminHome from '../components/adminComponents/AdminHome';
 import CarManage from '../components/adminComponents/CarManage';
 import RentalManage from '../components/adminComponents/RentalManage';
 import ReviewManage from '../components/adminComponents/ReviewManage';
-import AdminSideBar from '../components/adminComponents/adminSideBar';
+import AdminSideBar from '../components/adminComponents/AdminSideBar';
 import { Menu, X } from 'lucide-react'; // Import icons for menu toggle
 
 const AdminDashboard = () => {
