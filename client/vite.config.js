@@ -8,7 +8,7 @@ export default defineConfig({
     proxy : {
       '/api' : {
         changeOrigin : true , 
-        target : 'https://wheelie-backend.onrender.com' , 
+        target : 'https://wheelie-backend.onrender.com/' , 
         secure : false
       }
     }
