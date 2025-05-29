@@ -2,7 +2,7 @@ import axios from 'axios'
 
 //GET ALL CARS
 const getCars = async() => {
-    const response = await axios.get("/api/car")
+    const response = await axios.get("https://wheelie-backend.onrender.com/api/car")
     return response.data
 }
 
