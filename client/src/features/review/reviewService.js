@@ -1,4 +1,5 @@
 import axios from "axios"
+import { api } from "../../../api"
 
 const getAllReview = async(token) => {
 
@@ -8,7 +9,7 @@ const getAllReview = async(token) => {
         }
     }
 
-    const response = await axios.get('/api/admin/reviews' , options)
+    const response = await axios.get(`${api}/admin/reviews` , options)
     return response.data
 }
 
@@ -19,7 +20,7 @@ const fetchCarReviews = async(cid , token) => {
             authorization : `Bearer ${token}`
         }
     }
-    const response = await axios.get(`/api/car/${cid}/reviews` , options)
+    const response = await axios.get(`${api}/car/${cid}/reviews` , options)
     return response.data
 }
 
@@ -30,7 +31,7 @@ const addUserReview = async(cid , formData , token) => {
         }
     }
 
-    const response = await axios.post(`/api/car/${cid}/reviews/add` , formData , options)
+    const response = await axios.post(`${api}/car/${cid}/reviews/add` , formData , options)
     return response.data
 }
 

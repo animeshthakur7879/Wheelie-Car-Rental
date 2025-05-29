@@ -9,7 +9,7 @@ const getCars = async() => {
 
 //GET CAR 
 const getCar = async (cid) => {
-    const response = await axios.get(`/api/car/${cid}`)
+    const response = await axios.get(`${api}/car/${cid}`)
     return response.data
 }
 
@@ -22,7 +22,7 @@ const addCar = async (formData , token) => {
         }
     }
 
-    const response = await axios.post("/api/admin/car" , formData , options)
+    const response = await axios.post(`${api}/admin/car` , formData , options)
     return response.data
 }
 
@@ -35,7 +35,7 @@ const updateCar = async(id ,formData , token) => {
         }
     }
 
-    const response = await axios.put("/api/admin/car/"+id , formData , options)
+    const response = await axios.put(`${api}/admin/car/`+id , formData , options)
     return response.data
 
 
@@ -50,7 +50,7 @@ const removeCar = async(id , token) => {
         }
     }
 
-    const response = await axios.delete("/api/admin/car/"+id , options)
+    const response = await axios.delete(`${api}/admin/car/`+id , options)
     return response.data
 
 

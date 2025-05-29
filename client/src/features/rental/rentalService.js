@@ -1,4 +1,5 @@
 import axios from "axios"
+import { api } from "../../../api"
 
 const getAdminRentals = async(token) => {
 
@@ -8,7 +9,7 @@ const getAdminRentals = async(token) => {
         }
     }
     
-    const response = await axios.get("/api/admin/rentals" , options)
+    const response = await axios.get(`${api}/admin/rentals` , options)
     return(response.data) 
 }
 
@@ -19,7 +20,7 @@ export const getUserRentals = async(token) => {
         }
     }
 
-    const response = await axios.get("/api/rentals" , options)
+    const response = await axios.get(`${api}/rentals` , options)
     return response.data
 }
 
@@ -30,7 +31,7 @@ const addUserRental = async(cid , formData , token) => {
         }
     }
 
-    const response = await axios.post(`/api/rentals/${cid}` , formData , options)
+    const response = await axios.post(`${api}/rentals/${cid}` , formData , options)
     return response.data
 
 }
@@ -42,7 +43,7 @@ const updateUserRental = async(rid , formData , token) => {
         }
     }
 
-    const response = await axios.put(`/api/rentals/${rid}` , formData , options)
+    const response = await axios.put(`${api}/rentals/${rid}` , formData , options)
     return response.data
 }
 const deleteUserRental = async(rid , token) => {
@@ -52,7 +53,7 @@ const deleteUserRental = async(rid , token) => {
         }
     }
 
-    const response = await axios.delete(`/api/rentals/${rid}` , options)
+    const response = await axios.delete(`${api}/rentals/${rid}` , options)
     return response.data
 
 }
