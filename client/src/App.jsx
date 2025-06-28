@@ -9,6 +9,7 @@ import CarBookingPage from './pages/CarBookingPage';
 import MyRentals from './pages/MyRentals';
 import SearchResults from './pages/SearchResults';
 import MyProfile from './pages/MyProfile';
+import AdminRoute from './components/AdminRoutes';
 
 // Move this inner logic to a wrapper component
 const AppWrapper = () => {
@@ -25,7 +26,9 @@ const AppWrapper = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/admin/*" element={<AdminDashboard />} />
+          <Route path="/admin" element={<AdminRoute />}>
+            <Route path="*" element={<AdminDashboard />} />
+          </Route>
           {/* <Route path="/admin/car" element={<CarManage />} />
           <Route path="/admin/rentals" element={<RentalManage />} />
           <Route path="/admin/reviews" element={<ReviewManage />} />
